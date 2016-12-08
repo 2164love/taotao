@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.xyt.viewtest.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/tview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:padding="10dp"
+        android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tview"
+        android:layout_alignRight="@+id/tview"
+        android:layout_below="@+id/tview"
+        android:layout_marginTop="32dp"
+        android:onClick="clickSd"
+        android:text="相机" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn1"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:layout_toEndOf="@+id/tview"
+        android:layout_toRightOf="@+id/tview"
+        android:onClick="clickContacts"
+        android:text="打电话" />
+
+    <Button
+        android:id="@+id/btn_callBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn1"
+        android:layout_alignEnd="@+id/btn2"
+        android:layout_alignRight="@+id/btn2"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="setIntent"
+        android:text="回调" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn1"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/btn_callBack"
+        android:layout_toStartOf="@+id/btn_callBack" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:contentDescription="性别"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:button="@null"
+            android:textColor="@drawable/radiobutton"
+            android:gravity="center_horizontal"
+            android:text="男"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:button="@null"
+            android:drawableTop="@drawable/radiobutton"
+            android:gravity="center_horizontal"
+            android:text="女"></RadioButton>
+    </RadioGroup>
+
+    <CheckBox
+        android:text="CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignRight="@+id/switch1"
+        android:layout_alignEnd="@+id/switch1"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="60dp"
+        android:button="@null"
+        android:textColor="@drawable/radiobutton"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/radiobutton"
+        android:id="@+id/checkBox" />
+
+
+</RelativeLayout>
